@@ -42,8 +42,8 @@ function App() {
       <NavBar search={search} />
       <div className="container">
         <div className="row">
-          <div className="col-sm-12 col-md-4">
-            <Gif gif={selectedGif()} />
+          <div className="col-sm-12 col-md-4 d-flex justify-content-center align-items-center">
+            <Gif gif={selectedGif()} leftPanel={true}/>
           </div>
           <div className="col-sm-12 col-md-8">
             <GifList gifs={gifs} setSelectedGifId={setSelectedGifId}/>
