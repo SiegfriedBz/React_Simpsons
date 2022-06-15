@@ -4,16 +4,15 @@
   grid-gap: 0.25rem;
 }
 
-
 .my-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 1rem;
   width: 16rem;
+  height: 275px;
 }
 
 .my-card-image {
   width: 100%;
-  height: 75%;
   padding: 0.5rem;
   background-size: contain;
   border-radius: 1.25rem;
