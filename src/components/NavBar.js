@@ -27,7 +27,8 @@ const NavBar = ({search}) => {
               <input
                 onChange={(e) => setUserInput(e.target.value)}
                 className="form-control me-2"
-                type="search"
+                type="text"
+                value={userInput}
                 placeholder="Search"
                 aria-label="Search"
                 />
