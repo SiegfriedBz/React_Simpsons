@@ -18,6 +18,12 @@
   border-radius: 1.25rem;
 }
 
+@media(max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
 @media(max-width: 992px) {
   .cards {
     grid-template-columns: 1fr ;
