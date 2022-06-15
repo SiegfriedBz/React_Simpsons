@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const NavBar = () => {
+const NavBar = ({search}) => {
 
+  const [userInput, setUserInput] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    search(userInput)
+    setUserInput('')
+  }
 
   return (
       <nav className="navbar sticky-top navbar-expand-lg bg-light">
@@ -13,8 +20,17 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <form
+              onSubmit={handleSubmit}
+              className="d-flex"
+              >
+              <input
+                onChange={(e) => setUserInput(e.target.value)}
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                />
               <button className="btn btn-outline-primary" type="submit"><h4>Search</h4></button>
             </form>
           </div>
