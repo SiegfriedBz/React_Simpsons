@@ -9,7 +9,7 @@ function App() {
   const initGifs = [
     {id: uuidv4(), title: 'Twisty', url: 'https://media.giphy.com/media/s6EYTqTRqujIY/giphy.gif'},
     {id: uuidv4(), title: 'Bang', url: 'https://media.giphy.com/media/RSOUOj8H9A3Xq/giphy.gif'},
-    {id: uuidv4(), title: 'Rock', url: 'https://media.giphy.com/media/4oMoIbIQrvCjm/giphy.gif'},
+    {id: uuidv4(), title: 'RockIt', url: 'https://media.giphy.com/media/4oMoIbIQrvCjm/giphy.gif'},
     {id: uuidv4(), title: 'Love', url: 'https://media.giphy.com/media/18ANhgTABn04M/giphy.gif'},
   ]
 
@@ -17,7 +17,6 @@ function App() {
   const [selectedGifid, setSelectedGifId] = useState(undefined);
 
   const selectedGif = () => {
-    console.log(selectedGifid)
     if(selectedGifid === undefined) {
       return gifs.find(gif => gif.title === "Bang")
     }
